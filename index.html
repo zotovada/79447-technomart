@@ -2,30 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Техномарт - Каталог</title>
+    <title>Стартовая</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="container">
         <div class="main-header-top">
-          <div class="logo header-logo">
+          <div class="logo  header-logo">
             <a href="index.html">ТЕХНОМАРТ</a>
           </div>
           <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
             <input type="search" name="search-field" value="" placeholder="Поиск:">
           </form>
           <div class="user-transactions">
-            <a class="bookmark bookmark-add" href="#">Закладок: <span>0</span></a>
-            <a class="cart cart-add" href="#">Корзина: <span>0</span></a>
-            <a class="btn btn-green" href="#">Оформить заказ</a>
+            <a class="bookmark" href="#">Закладок: <span class="bookmark-quantity">0</span></a>
+            <a class="cart" href="#">Корзина: <span class="cart-quantity">0</span></a>
+            <a class="btn  btn-green" href="#">Оформить заказ</a>
           </div>
         </div>
         <div class="main-header-middle">
           <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-          <p class="header-contact-info">
-            <span>+7(812)555-05-55</span><br>
+          <div class="header-contact">
+            <span class="header-contact-phone">+7(812)555-05-55</span>
             г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
-          </p>
+          </div>
           <div class="user-block">
             <a class="login" href="#">Войти</a>
             <a class="check-in" href="#">Регистрация</a>
@@ -33,7 +34,7 @@
         </div>
         <nav class="header-nav">
           <ul class="header-nav-list">
-            <li class="header-nav-item header-nav-item-active">
+            <li class="header-nav-item  header-nav-item-active">
               Главная
             </li>
             <li class="header-nav-item">
@@ -61,65 +62,70 @@
     <main class="container">
       <div class="catalogue-categories">
         <div class="category-item">
-          <div class="flag-new flag-new-active">
+          <div class="flag-new  flag-new-active">
             новинка
           </div>
           <h3>Материалы</h3>
           <a href="#">На любой вкус</a>
         </div>
         <div class="category-item">
-          <div class="flag-new flag-new-active">
+          <div class="flag-new">
           </div>
           <h3>Инструмент</h3>
           <a href="#">На все случаи</a>
         </div>
         <div class="category-item">
-          <div class="flag-new flag-new-active">
+          <div class="flag-new">
           </div>
           <h3>Техника</h3>
           <a href="#">Для стройки</a>
         </div>
         <div class="category-item">
-          <div class="flag-new flag-new-active">
+          <div class="flag-new">
           </div>
           <h3>Скидки 50%</h3>
           <a href="#">На 350 товаров</a>
         </div>
         <div class="category-item">
-          <div class="flag-new flag-new-active">
+          <div class="flag-new">
           </div>
           <h3>Доставка</h3>
           <a href="#">Бесплатно</a>
         </div>
-        <div class="slider">
-          <div class="slider-slide">
-            <div class="slider-slide-info">
-              <h4>Перфораторы</h4>
-              <p>Настоящие мужские игрушки</p>
-            </div>
-            <img src="http://placehold.it/150x100">
+        <div class="slider-block">
+          <div class="slider-unit">
+            <h4>Перфораторы</h4>
+            <p>Настоящие мужские игрушки</p>
+            <img src="img/slider-unit1.jpg" width="620" height="265" alt="Перфораторы">
           </div>
-          <a class="slider-prev" href="#">назад</a>
-          <a class="slider-next" href="#">вперед</a>
-          <a class="btn btn-red" href="#">Открыть каталог</a>
+          <div class="slider-unit">
+            <h4>Дрели</h4>
+            <p>Соседям на радость!</p>
+            <img src="img/slider-unit2.jpg" width="620" height="265" alt="Дрели">
+          </div>
+          <input type="radio" id="slider-prev" name="toggle" checked>
+          <label for="slider-prev">назад</label>
+          <input type="radio" id="slider-next" name="toggle">
+          <label for="slider-next">вперед</label>
+          <a class="btn  btn-red" href="#">Открыть каталог</a>
         </div>
       </div>
       <div class="popular">
         <div class="popular-title">
           <h2>Популярные товары</h2>
-          <a class="btn btn-red">Все популярные товары</a>
+          <a class="btn  btn-red">Все популярные товары</a>
         </div>
         <div class="catalog-items">
           <div class="catalog-item">
-            <div class="flag-new flag-new-active">
+            <div class="flag-new">
             </div>
             <div class="catalog-item-image">
-              <img src="http://placehold.it/150x100" alt="Перфоратор BOSCH BFG 9000">
+              <img src="img/catalog-item-image1.png" width="180" height="160" alt="Перфоратор BOSCH BFG 9000">
             </div>
-            <div class="catalog-item-title">
-              Перфоратор BOSCH BFG 9000
-            </div>
-            <div class="previous-price previous-price-active">
+            <h5 class="catalog-item-title">
+              <a href="#">Перфоратор BOSCH BFG 9000</a>
+            </h5>
+            <div class="previous-price">
               32500 Р.
             </div>
             <div class="new-price">
@@ -127,15 +133,15 @@
             </div>
           </div>
           <div class="catalog-item">
-            <div class="flag-new flag-new-active">
+            <div class="flag-new">
             </div>
             <div class="catalog-item-image">
-              <img src="http://placehold.it/150x100" alt="Перфоратор BOSCH BFG 3000">
+              <img src="img/catalog-item-image2.png" width="180" height="160" alt="Перфоратор BOSCH BFG 3000">
             </div>
-            <div class="catalog-item-title">
-              Перфоратор BOSCH BFG 3000
-            </div>
-            <div class="previous-price previous-price-active">
+            <h5 class="catalog-item-title">
+              <a href="#">Перфоратор BOSCH BFG 3000</a>
+            </h5>
+            <div class="previous-price">
               22500 Р.
             </div>
             <div class="new-price">
@@ -143,15 +149,15 @@
             </div>
           </div>
           <div class="catalog-item">
-            <div class="flag-new flag-new-active">
+            <div class="flag-new">
             </div>
             <div class="catalog-item-image">
-              <img src="http://placehold.it/150x100" alt="Перфоратор BOSCH BFG 6000">
+              <img src="img/catalog-item-image3.png" width="180" height="160" alt="Перфоратор BOSCH BFG 6000">
             </div>
-            <div class="catalog-item-title">
-              Перфоратор BOSCH BFG 6000
-            </div>
-            <div class="previous-price previous-price-active">
+            <h5 class="catalog-item-title">
+              <a href="#">Перфоратор BOSCH BFG 6000</a>
+            </h5>
+            <div class="previous-price">
               30500 Р.
             </div>
             <div class="new-price">
@@ -159,51 +165,52 @@
             </div>
           </div>
           <div class="catalog-item">
-            <div class="flag-new flag-new-active">
+            <div class="flag-new  flag-new-active">
               новинка
             </div>
             <div class="catalog-item-image">
-              <img src="http://placehold.it/150x100" alt="Перфоратор BOSCH BFG 2000">
+              <img src="img/catalog-item-image2.png" width="180" height="160" alt="Перфоратор BOSCH BFG 2000">
             </div>
-            <div class="catalog-item-title">
-              Перфоратор BOSCH BFG 2000
-            </div>
-            <div class="previous-price previous-price-active">
+            <h5 class="catalog-item-title">
+              <a href="#">Перфоратор BOSCH BFG 2000</a>
+            </h5>
+            <div class="previous-price">
             </div>
             <div class="new-price">
               12500 Р.
             </div>
           </div>
         </div>
+      </div>
       <div class="popular">
         <div class="popular-title">
           <h2>Популярные производители</h2>
-          <a class="btn btn-red">Все производители</a>
+          <a class="btn  btn-red">Все производители</a>
         </div>
         <div class="brand-items">
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="Bosch">
+            <img src="img/brand-icon1.jpg" alt="Bosch">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="Makita">
+            <img src="img/brand-icon2.jpg" alt="Makita">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="DeWalt">
+            <img src="img/brand-icon3.jpg" alt="DeWalt">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="Интерскол">
+            <img src="img/brand-icon4.jpg" alt="Интерскол">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="Hitachi">
+            <img src="img/brand-icon5.jpg" alt="Hitachi">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="LG">
+            <img src="img/brand-icon6.jpg" alt="LG">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="AEG">
+            <img src="img/brand-icon7.jpg" alt="AEG">
           </div>
           <div class="brand-item">
-            <img src="http://placehold.it/150x100" alt="Metabo">
+            <img src="img/brand-icon8.jpg" alt="Metabo">
           </div>
         </div>
       </div>
@@ -214,7 +221,7 @@
           </p>
         </div>
         <ul class="tab-list">
-          <li class="tab-item tab-item-active">
+          <li class="tab-item  tab-item-active">
             Доставка
           </li>
           <li class="tab-item">
@@ -231,6 +238,18 @@
             поднимая его на ваш этаж!
             </p>
           </div>
+          <div class="tab-slide">
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+            Дом уж восстановите как-нибудь сами.
+            </p>
+          </div>
+          <div class="tab-slide">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще!<br>
+            Кредитные консультанты придут вам на помощь.
+            </p>
+          </div>
         </div>
       </div>
       <div class="information">
@@ -245,24 +264,39 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="btn btn-red" href="#">Подробнее о компании</a>
+          <a class="btn  btn-red" href="#">Подробнее о компании</a>
         </div>
         <div class="adress">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
           <div class="mini-map">
-            <img src="http://placehold.it/150x100">
+            <img src="img/mini-map.jpg" width="300" height="158" alt="Схема проезда">
           </div>
-          <a class="btn btn-red" href="#">Заблудились? Напишите нам</a>
+          <div class="map-hover">
+            <img src="img/map-hover.jpg" width="1200" height="780" alt="Схема проезда">
+            <button class="close"></button>
+          </div>
+          <a class="btn  btn-red" href="#">Заблудились? Напишите нам</a>
         </div>
+        <form class="request-field" action="https://echo.htmlacademy.ru" method="post">
+          <label for="request-username">Ваше имя:</label>
+          <input type="text" name="username" id="request-username" placeholder="Представьтесь, пожалуйста">
+          <label for="request-email">Ваш e-mail:</label>
+          <input type="email" name="email" id="request-email" placeholder="Для отправки ответа">
+          <label for="request-text">Текст письма:</label>
+          <textarea name="letter" id="request-text">В свободной форме</textarea>
+          <div class="field-actions">
+            <input class="btn  btn-red" type="submit" value="Отправить">
+          </div>
+        </form>
       </div>
     </main>
     <footer class="main-footer">
       <div class="container">
         <div class="main-footer-top">
-          <div class="footer-contact-info">
-            <div class="logo footer-logo">
+          <div class="footer-contact">
+            <div class="logo  footer-logo">
               <a href="index.html">Техномарт</a>
             </div>
             <p>г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8
@@ -308,9 +342,9 @@
             Все права защищены
           </div>
           <div class="social">
-            <a class="icon icon-vk" href="#">Вконтакте</a>
-            <a class="icon icon-facebook" href="#">Фейсбук</a>
-            <a class="icon icon-instagram" href="#">Инстаграм</a>
+            <a class="icon  icon-vk" href="#">Вконтакте</a>
+            <a class="icon  icon-facebook" href="#">Фейсбук</a>
+            <a class="icon  icon-instagram" href="#">Инстаграм</a>
           </div>
           <div class="feedback">
             <p>Обратная связь:</p>
