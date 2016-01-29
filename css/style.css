@@ -1,0 +1,23 @@
+body {
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: normal;
+  font-family: "PT Sans";
+}
+h1 {
+  font-size: 16px;
+  line-height: 23px;
+  color: #ee3643;
+  font-weight: normal;
+  font-style: italic;
+  font-family: "Cuprum";
+}
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  font-weight: normal;
+  font-family: "Cuprum";
+  text-transform: uppercase;
+}
