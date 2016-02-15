@@ -353,8 +353,8 @@ input {
 
 .cart {
   padding-left: 50px;
-  padding-right: 25px;
-  width: 75px;
+  padding-right: 20px;
+  width: 80px;
   position: relative;
 }
 
@@ -658,6 +658,7 @@ input {
   color: #c1c6ce;
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 .breadcrumbs li:last-child::after {
@@ -1700,7 +1701,7 @@ display:block;
 .footer-nav-categories li {
   display: inline-block;
   vertical-align: top;
-  margin-right: 55px;
+  margin-right: 54px;
 }
 
 .footer-nav-main li:last-child,
@@ -2018,4 +2019,8 @@ display:block;
 
 .cart-field .btn-white:active {
   border-color: #ee3946;
+}
+
+.modal-content-show {
+  display: block;
 }
