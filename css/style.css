@@ -611,6 +611,7 @@ input {
 }
 
 .header-nav-link:hover,
+.header-nav-link-active,
 .header-nav-item-active,
 .header-nav-item-active:hover,
 .header-nav-item-active:active {
@@ -1610,17 +1611,29 @@ display:block;
   width: 300px;
   height: 155px;
   margin-bottom: 40px;
-  overflow: hidden;
   position: relative;
-  background: url("../img/bg-map.jpg") no-repeat;
 }
 
-#yandex-map {
-  vertical-align: bottom;
+.map .modal-close {
+  right: -37px;
+}
+
+.big-map {
   position: absolute;
   top: -182px;
   left: -640px;
   box-shadow: 0 0 16px rgba(35,31,32,0.5);
+  display: none;
+}
+
+.map img,
+.map iframe {
+  vertical-align: bottom;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
 }
 
 .adress .btn {
@@ -1825,6 +1838,30 @@ display:block;
 
 /* POP-UPS */
 
+@keyframes bounce {
+  0%   {
+    transform: translateY(3000px);
+  }
+  60%  {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
   z-index: 100;
@@ -2023,4 +2060,12 @@ display:block;
 
 .modal-content-show {
   display: block;
+}
+
+.contact-show {
+  animation: bounce 0.8s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
