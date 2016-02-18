@@ -60,7 +60,6 @@ body {
   font-weight: normal;
   font-family: "PT Sans", "Arial", sans-serif;
   position: relative;
-  background: url("../img/technomart-catalo.jpg") no-repeat 50% 0;
 }
 
 h1 {
@@ -465,15 +464,17 @@ input {
   padding-left: 47px;
   padding-right: 25px;
   margin-right: 10px;
+  position: relative;
 }
 
-.icon-login {
+.login::before {
+  content: "\2386";
   font-size: 22px;
   line-height: 22px;
+  font-family: "symbols-technomart";
   position: absolute;
   top: 10px;
-  left: 25px;
-  text-decoration: none;
+  left: 15px;
   color: #c5c5c5;
 }
 
@@ -496,40 +497,40 @@ input {
   position: relative;
 }
 
-.icon-user {
-  position: absolute;
-  left: 11px;
-  font-size: 18px;
-  color: #c5c5c5;
-  text-decoration: none;
-}
-
 .user-cabinet {
   color: #000000;
   text-decoration: none;
   margin-right: 22px;
+  position: relative;
+}
+
+.user-cabinet::before {
+  content: "\1f468";
+  font-size: 18px;
+  font-family: "symbols-technomart";
+  color: #c5c5c5;
+  position: absolute;
+  left: -32px;
 }
 
 .icon-logout {
   position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 22px;
   color: #c5c5c5;
   text-decoration: none;
   margin-left: 10px;
 }
 
-.icon-login:hover,
-.icon-user:hover,
+.login:hover::before,
+.user-cabinet:hover::before,
 .icon-logout:hover {
   color: #32425c;
 }
 
-.user-cabinet:active {
-  opacity: 0.3;
-}
-
-.icon-login:active,
-.icon-user:active,
+.login:active::before,
+.user-cabinet:active::before,
 .icon-logout:active {
   color: #c5c5c5;
 }
@@ -569,7 +570,7 @@ input {
 .check-in:active,
 .user-orders:active,
 .user-area:active,
-.user-cabinet-link:active {
+.user-cabinet:active {
   color: rgba(0,0,0,0.3);
 }
 
@@ -687,22 +688,12 @@ input {
 
 .catalogue-categories {
   font-size: 0;
-  margin-top: 60px;
-  margin-bottom: 55px;
-}
-
-.catalogue-left {
-  float: left;
-  width: 620px;
-  margin-right: 20px;
-}
-
-.catalogue-right {
-  float: right;
-  width: 300px;
+  padding-top: 60px;
+  padding-bottom: 35px;
 }
 
 .category-item {
+  float: left;
   width: 254px;
   min-height: 84px;
   margin-bottom: 20px;
@@ -711,6 +702,12 @@ input {
   padding-left: 23px;
   padding-right: 23px;
   position: relative;
+  margin-right: 20px;
+}
+
+.category-item:nth-child(3n),
+.category-item:nth-child(5) {
+  margin-right: 0;
 }
 
 .category-item-title {
@@ -745,41 +742,35 @@ input {
   background-color: rgba(0,0,0,0.3);
 }
 
-.catalogue-left  .category-item:first-child {
-  float: left;
-  width: 254px;
-  margin-right: 20px;
+.category-material {
   background-color: #f6b22d;
   background-image: url("../img/catalogue-icon-1.png");
   background-repeat: no-repeat;
   background-position: 212px 30px;
 }
 
-.catalogue-left  .category-item:nth-child(2) {
-  float: left;
-  width: 254px;
+.category-instrument {
   background-color: #4aafde;
   background-image: url("../img/catalogue-icon-2.png");
   background-repeat: no-repeat;
-  background-position: 195px 30px;
+  background-position: 196px 31px;
 }
 
-.catalogue-right  .category-item:first-child {
+.category-technic {
   background-color: #cc79d1;
   background-image: url("../img/catalogue-icon-3.png");
   background-repeat: no-repeat;
   background-position: 190px 30px;
 }
 
-.catalogue-right  .category-item:nth-child(2) {
+.category-discount {
   background-color: #85d179;
   background-image: url("../img/catalogue-icon-4.png");
   background-repeat: no-repeat;
   background-position: 195px 25px;
 }
 
-.catalogue-right  .category-item:last-child {
-  margin-bottom: 0;
+.category-delivery {
   background-color: #f6b22d;
   background-image: url("../img/catalogue-icon-5.png");
   background-repeat: no-repeat;
@@ -802,11 +793,17 @@ input {
 }
 
 .slider-block {
-  clear: both;
+  float: left;
   width: 620px;
-  height: 266px;
+  height: 265px;
+  margin-right: 20px;
   position: relative;
   overflow: hidden;
+}
+
+.slider-unit {
+  background-color: #82715f;
+  min-height: 266px;
 }
 
 .slider-unit-promo {
@@ -872,7 +869,7 @@ input {
   font-family: "symbols-technomart";
   color: #ffffff;
   position: absolute;
-  left: -272px;
+  left: -270px;
   top: -108px;
 }
 
@@ -1088,7 +1085,7 @@ input {
 
 .sorting {
   font-size: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: #f7f3ec;
 }
 
@@ -1165,11 +1162,11 @@ input {
 }
 
 .popular-header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   padding-left: 28px;
   padding-right: 24px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   background-color: #f7f3ec;
 }
 
@@ -1186,33 +1183,35 @@ input {
 .catalog-item {
   float: left;
   width: 220px;
-  min-height: 318px;
+  min-height: 298px;
   margin-right: 20px;
   margin-bottom: 20px;
   position: relative;
   outline: 1px solid #e5e5e5;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
-.catalog-item:last-child {
+.popular .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
 .catalog .catalog-items {
-  margin-bottom: 52px;
+  margin-bottom: 30px;
 }
 
 .catalog .catalog-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.catalog .catalog-item:nth-child(7),
-.catalog .catalog-item:nth-child(8),
-.catalog .catalog-item:nth-child(9) {
-  margin-bottom: 0;
+.catalog-item-image {
+  margin-bottom: 12px;
 }
 
 .catalog-item-image {
-  margin-bottom: 7px;
+  width: 220px;
+  height: 168px;
+  overflow: hidden;
 }
 
 .catalog-item-image img {
@@ -1223,10 +1222,8 @@ input {
 }
 
 .catalog-item-title {
-  padding-left: 28px;
-  padding-right: 28px;
-  margin-bottom: 5px;
-  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .catalog-item-title a {
@@ -1242,12 +1239,12 @@ input {
   font-family: "PT Sans", "Arial", sans-serif;
   text-decoration: line-through;
   min-height: 18px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 60px;
   padding-right: 60px;
   text-align: center;
-  margin-bottom: 5px;
+
 }
 
 .new-price {
@@ -1257,12 +1254,11 @@ input {
   font-weight: bold;
   font-family: "PT Sans", "Arial", sans-serif;
   padding-top: 10px;
-  padding-bottom: 9px;
-  padding-left: 25px;
-  padding-right: 15px;
-  text-align: center;
-  margin-left: 44px;
-  margin-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 80px;
+  margin: 0 auto;
   background-color: #ee3946;
   border-radius: 3px;
   position: relative;
@@ -1272,9 +1268,11 @@ input {
   content: "";
   position: absolute;
   top: 0;
-  right: -35px;
-  border: 19px solid transparent;
-  border-left-color: #ee3946;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid #ffffff;
+  border-left-color: transparent;
 }
 
 .catalog-item-actions {
@@ -1296,14 +1294,15 @@ input {
   line-height: 18px;
   font-family: "Cuprum", "Arial", sans-serif;
   border-radius: 3px;
-  padding-bottom: 7px;
 }
 
 .catalog-item-actions .btn-green {
   color: #ffffff;
   width: 135px;
-  border-bottom: 3px solid #367315;
+  box-shadow: inset 0 -3px 0 #367315;
   margin-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .catalog-item-actions .btn-green:active {
@@ -1315,6 +1314,7 @@ input {
   background-color: #ffffff;
   border: 3px solid #63a63e;
   padding-top: 7px;
+  padding-bottom: 7px;
   width: 129px;
 }
 
@@ -1405,7 +1405,7 @@ input {
 
 .instrument-info {
   padding-top: 60px;
-  padding-bottom: 75px;
+  padding-bottom: 70px;
   background-color: #f2f6f8;
 }
 
@@ -1420,7 +1420,7 @@ input {
 
 .services {
   padding-top: 60px;
-  margin-bottom:75px;
+  margin-bottom:76px;
   background-color: #f2f6f8;
 }
 
@@ -1544,7 +1544,7 @@ display:block;
 }
 
 .information {
-  padding-bottom: 86px;
+  padding-bottom: 85px;
 }
 
 .seo-block {
@@ -1558,12 +1558,9 @@ display:block;
   margin-bottom: 23px;
 }
 
-.seo-block p:first-of-type {
-  margin-bottom: 25px;
-}
-
-.seo-block p:last-of-type {
-  margin-bottom: 21px;
+.seo-block p {
+  margin-bottom: 22px;
+  margin-top: 23px;
 }
 
 .transport-list {
@@ -1612,6 +1609,16 @@ display:block;
   height: 155px;
   margin-bottom: 40px;
   position: relative;
+  background-color: #dbdad4;
+}
+
+.map a {
+  text-decoration: none; /* для альтернативного текста в случае, если картинка с картой не будет отображаться */
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
 .map .modal-close {
@@ -1643,11 +1650,11 @@ display:block;
 /* FOOTER */
 
 .main-footer-top {
+  padding-bottom: 32px;
   background-color: #32425c;
 }
 
 .footer-contact {
-  min-height: 190px;
   float: left;
   width: 335px;
 }
@@ -1751,28 +1758,28 @@ display:block;
   font-family: "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
+  padding-top: 37px;
+  padding-bottom: 35px;
 }
 
 .copy-rights,
 .feedback,
-.developer {
-  padding-top: 37px;
-  padding-bottom: 35px;
+.developer,
+.social {
   float: left;
 }
 
 .copy-rights {
   width: 250px;
-  margin-right: 50px;
+  margin-right: 45px;
 }
 
 .social {
   float: left;
-  width: 320px;
-  min-height: 105px;
+  width: 325px;
   font-size: 0;
-  position: relative;
   margin-right: 20px;
+  text-align: center;
 }
 
 .social .icon {
@@ -1782,13 +1789,15 @@ display:block;
   height: 40px;
   background-color: #212a3a;
   border-radius: 50%;
-  position: absolute;
-  top: 35px;
   text-decoration: none;
+  color: #ffffff;
   font-size: 18px;
   line-height: 40px;
-  color: #ffffff;
-  text-align: center;
+  margin-right: 5px;
+}
+
+.social .icon:last-child {
+  margin-right: 0;
 }
 
 .social .icon:hover {
@@ -1797,18 +1806,6 @@ display:block;
 
 .social .icon:active {
   background-color: #ee3946;
-}
-
-.social .icon:first-child {
-  left: 90px;
-}
-
-.social .icon:nth-child(2) {
-  left: 134px;
-}
-
-.social .icon:nth-child(3) {
-  left: 178px;
 }
 
 .feedback {
@@ -1864,7 +1861,7 @@ display:block;
 
 .modal {
   position: fixed;
-  z-index: 100;
+  z-index: 101;
 }
 
 .contact-field,
@@ -1891,7 +1888,7 @@ display:block;
   position: absolute;
   top: 8px;
   right: 5px;
-  z-index: 101;
+  z-index: 102;
 }
 
 .modal-close::before,
@@ -2047,7 +2044,7 @@ display:block;
   padding-top: 9px;
   padding-bottom: 9px;
   border: 1px solid #ffffff;
-  width: 218px;
+  width: 220px;
 }
 
 .cart-field .btn-white:hover {

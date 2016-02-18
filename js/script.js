@@ -22,6 +22,14 @@ if (document.querySelector(".contact-field")) {
     }
   });
 
+  letter.addEventListener("focus", function() {
+    letter.textContent = "";
+  });
+
+  letter.addEventListener("blur", function() {
+    letter.textContent = "В свободной форме";
+  });
+
   form.addEventListener("submit", function(event) {
     if (!letter.value || !username.value || !email.value) {
       event.preventDefault ();
