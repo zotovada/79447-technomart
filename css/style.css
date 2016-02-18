@@ -515,6 +515,8 @@ input {
 
 .icon-logout {
   position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 22px;
   color: #c5c5c5;
   text-decoration: none;
@@ -751,7 +753,7 @@ input {
   background-color: #4aafde;
   background-image: url("../img/catalogue-icon-2.png");
   background-repeat: no-repeat;
-  background-position: 195px 30px;
+  background-position: 196px 31px;
 }
 
 .category-technic {
@@ -800,7 +802,7 @@ input {
 }
 
 .slider-unit {
-  background-color: #cccccc;
+  background-color: #82715f;
   min-height: 266px;
 }
 
@@ -867,7 +869,7 @@ input {
   font-family: "symbols-technomart";
   color: #ffffff;
   position: absolute;
-  left: -272px;
+  left: -270px;
   top: -108px;
 }
 
@@ -1083,7 +1085,7 @@ input {
 
 .sorting {
   font-size: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: #f7f3ec;
 }
 
@@ -1160,11 +1162,11 @@ input {
 }
 
 .popular-header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   padding-left: 28px;
   padding-right: 24px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   background-color: #f7f3ec;
 }
 
@@ -1181,11 +1183,13 @@ input {
 .catalog-item {
   float: left;
   width: 220px;
-  min-height: 318px;
+  min-height: 298px;
   margin-right: 20px;
   margin-bottom: 20px;
   position: relative;
   outline: 1px solid #e5e5e5;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .popular .catalog-item:nth-child(4n) {
@@ -1193,7 +1197,7 @@ input {
 }
 
 .catalog .catalog-items {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .catalog .catalog-item:nth-child(3n) {
@@ -1201,7 +1205,13 @@ input {
 }
 
 .catalog-item-image {
-  margin-bottom: 7px;
+  margin-bottom: 12px;
+}
+
+.catalog-item-image {
+  width: 220px;
+  height: 168px;
+  overflow: hidden;
 }
 
 .catalog-item-image img {
@@ -1212,10 +1222,8 @@ input {
 }
 
 .catalog-item-title {
-  padding-left: 28px;
-  padding-right: 28px;
-  margin-bottom: 5px;
-  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .catalog-item-title a {
@@ -1231,12 +1239,12 @@ input {
   font-family: "PT Sans", "Arial", sans-serif;
   text-decoration: line-through;
   min-height: 18px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 60px;
   padding-right: 60px;
   text-align: center;
-  margin-bottom: 5px;
+
 }
 
 .new-price {
@@ -1246,12 +1254,11 @@ input {
   font-weight: bold;
   font-family: "PT Sans", "Arial", sans-serif;
   padding-top: 10px;
-  padding-bottom: 9px;
-  padding-left: 25px;
-  padding-right: 15px;
-  text-align: center;
-  margin-left: 44px;
-  margin-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 80px;
+  margin: 0 auto;
   background-color: #ee3946;
   border-radius: 3px;
   position: relative;
@@ -1261,9 +1268,11 @@ input {
   content: "";
   position: absolute;
   top: 0;
-  right: -35px;
-  border: 19px solid transparent;
-  border-left-color: #ee3946;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid #ffffff;
+  border-left-color: transparent;
 }
 
 .catalog-item-actions {
@@ -1285,14 +1294,15 @@ input {
   line-height: 18px;
   font-family: "Cuprum", "Arial", sans-serif;
   border-radius: 3px;
-  padding-bottom: 7px;
 }
 
 .catalog-item-actions .btn-green {
   color: #ffffff;
   width: 135px;
-  border-bottom: 3px solid #367315;
+  box-shadow: inset 0 -3px 0 #367315;
   margin-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .catalog-item-actions .btn-green:active {
@@ -1304,6 +1314,7 @@ input {
   background-color: #ffffff;
   border: 3px solid #63a63e;
   padding-top: 7px;
+  padding-bottom: 7px;
   width: 129px;
 }
 
@@ -1394,7 +1405,7 @@ input {
 
 .instrument-info {
   padding-top: 60px;
-  padding-bottom: 75px;
+  padding-bottom: 70px;
   background-color: #f2f6f8;
 }
 
@@ -1409,7 +1420,7 @@ input {
 
 .services {
   padding-top: 60px;
-  margin-bottom:78px;
+  margin-bottom:76px;
   background-color: #f2f6f8;
 }
 
@@ -1548,7 +1559,7 @@ display:block;
 }
 
 .seo-block p {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   margin-top: 23px;
 }
 
@@ -1598,7 +1609,7 @@ display:block;
   height: 155px;
   margin-bottom: 40px;
   position: relative;
-  background-color: #cccccc;
+  background-color: #dbdad4;
 }
 
 .map a {
@@ -2033,7 +2044,7 @@ display:block;
   padding-top: 9px;
   padding-bottom: 9px;
   border: 1px solid #ffffff;
-  width: 218px;
+  width: 220px;
 }
 
 .cart-field .btn-white:hover {
