@@ -226,20 +226,21 @@ img {
 
 .logo {
   float: left;
+  width: 220px;
+}
+
+.logo a {
   position: relative;
+  display: block;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: #ee3946;
   color: #ffffff;
 }
 
-.logo a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.logo::after {
+.logo a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -248,19 +249,19 @@ img {
   background-color: #b52933;
 }
 
-.logo:hover {
+.logo a:hover {
   background-color: #ca2c37;
 }
 
-.logo:active {
+.logo a:active {
   background-color: #ba2732;
 }
 
-.logo:hover::after {
+.logo a:hover::after {
   background-color: #9a212a;
 }
 
-.logo:active::after {
+.logo a:active::after {
   background-color: #8e1e26;
 }
 
@@ -295,7 +296,7 @@ HEADER
   background-color: #293449;
 }
 
-.main-header-top .header-logo {
+.header-logo a {
   width: 116px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -305,7 +306,7 @@ HEADER
   line-height: 30px;
 }
 
-.main-header-top .header-logo::after {
+.header-logo a::after {
   top: 42px;
 }
 
@@ -1644,8 +1645,7 @@ FOOTER
   width: 335px;
 }
 
-.footer-contact .footer-logo {
-  width: 144px;
+.footer-logo a {
   margin-bottom: 32px;
   padding-top: 14px;
   padding-bottom: 13px;
@@ -1655,7 +1655,7 @@ FOOTER
   line-height: 36px;
 }
 
-.footer-contact .footer-logo::after {
+.footer-logo a::after {
   top: 63px;
 }
 
