@@ -5,13 +5,13 @@
     <title>Каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic&amp;subset=latin,cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="main-header-top">
-        <div class="container clearfix">
+        <div class="container  clearfix">
           <div class="logo  header-logo">
             <a href="index.html">Техномарт</a>
           </div>
@@ -19,7 +19,7 @@
             <input type="search" name="search-field" id="search-field">
             <label for="search-field">Поиск:</label>
           </form>
-          <div class="user-transactions clearfix">
+          <div class="user-transactions  clearfix">
             <a class="bookmark" href="#">
               Закладки: <span class="bookmark-quantity">0</span>
             </a>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="main-header-middle">
-        <div class="container clearfix">
+        <div class="container  clearfix">
           <h1><em>Интернет-магазин строительных материалов<br> и инструментов для ремонта</em></h1>
           <div class="header-contact">
             <span class="header-contact-phone">+7 (812) 555-05-55</span>
@@ -96,7 +96,7 @@
         <div class="product-card-title">
           <h2 class="instrument-title">Перфораторы</h2>
         </div>
-        <div class="catalog-content clearfix">
+        <div class="catalog-content  clearfix">
           <form class="filters" action="https://echo.htmlacademy.ru" method="post">
             <h6 class="filters-title">Фильтр:</h6>
             <fieldset class="filter-price">
@@ -158,7 +158,7 @@
                 </li>
               </ul>
             </div>
-            <div class="catalog-items clearfix">
+            <div class="catalog-items  clearfix">
               <div class="catalog-item">
                 <div class="flag-new">
                 </div>
@@ -338,17 +338,17 @@
               </div>
             </div>
             <ul class="catalog-paginator">
-              <li class="btn  btn-white btn-white-active">
+              <li class="btn  paginator-page  paginator-page-active">
                 1
               </li>
-              <li class="btn  btn-white">
-                <a href="#">2</a>
+              <li class="paginator-page">
+                <a class="btn  btn-white" href="#">2</a>
               </li>
-              <li class="btn  btn-white">
-                <a href="#">3</a>
+              <li class="paginator-page">
+                <a class="btn  btn-white" href="#">3</a>
               </li>
-              <li class="btn  btn-white">
-                <a href="#">Следующая</a>
+              <li class="paginator-page">
+                <a class="btn  btn-white  page-next" href="#">Следующая</a>
               </li>
             </ul>
           </div>
@@ -365,7 +365,7 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer-top">
-        <div class="container clearfix">
+        <div class="container  clearfix">
           <div class="footer-contact">
             <div class="logo  footer-logo">
               <a href="index.html">Техномарт</a>
@@ -409,7 +409,7 @@
         </div>
       </div>
       <div class="main-footer-bottom">
-        <div class="container clearfix">
+        <div class="container  clearfix">
           <div class="copy-rights">
             © 2010–2016 Компания «Техномарт»
             Все права защищены
@@ -430,7 +430,7 @@
         </div>
       </div>
     </footer>
-    <div class="cart-field modal">
+    <div class="cart-field  modal">
         <p class="modal-content"><span class="check-icon"></span>Товар добавлен в корзину!</p>
         <div class="field-actions">
           <a class="btn  btn-red" href="#">Оформить заказ</a>

@@ -75,66 +75,58 @@ body {
   line-height: 24px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
-  color: #000000;
 }
 
 h1 {
-  float: left;
-  width: 200px;
-  margin: 0;
-  margin-right: 50px;
-  padding-left: 52px;
-  padding-right: 18px;
   font-size: 16px;
   line-height: 23px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  color: #ee3946;
 }
 
 h2 {
-  margin: 0;
   font-size: 30px;
   line-height: 36px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  color: #32425c;
 }
 
 h3 {
-  margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-family: "Cuprum", "Arial", sans-serif;
-  color: #ffffff;
 }
 
 h4 {
-  margin: 0;
   font-size: 36px;
   line-height: 43px;
   font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 h5 {
-  margin: 0;
   font-size: 18px;
   line-height: 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
-  color: #000000;
 }
 
 h6 {
-  margin: 0;
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+body,
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
   color: #000000;
 }
 
@@ -453,6 +445,16 @@ HEADER
   padding-bottom: 38px;
 }
 
+.main-header-middle h1 {
+  float: left;
+  width: 200px;
+  margin: 0;
+  margin-right: 50px;
+  padding-left: 52px;
+  padding-right: 18px;
+  color: #ee3946;
+}
+
 .main-header-middle .header-contact {
   float: left;
   width: 270px;
@@ -539,8 +541,8 @@ HEADER
   margin-bottom: 5px;
   padding-top: 9px;
   padding-bottom: 11px;
-  padding-left: 47px;
   padding-right: 10px;
+  padding-left: 10px;
   font-size: 21px;
   line-height: 25px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -548,6 +550,7 @@ HEADER
 
 .log-block .user-cabinet {
   margin-right: 22px;
+  padding-left: 27px;
   text-decoration: none;
   color: #000000;
 }
@@ -555,7 +558,7 @@ HEADER
 .log-block .user-cabinet::before {
   content: "\1f468";
   position: absolute;
-  left: 15px;
+  left: 10px;
   font-size: 18px;
   font-family: "symbols-technomart";
   color: #c5c5c5;
@@ -599,7 +602,19 @@ HEADER
 }
 
 .user-info .user-orders {
+  position: relative;
   margin-right: 28px;
+}
+
+.user-info .user-orders::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -16px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #32425c;
 }
 
 .user-block .login,
@@ -736,6 +751,11 @@ MAIN CONTENT
   background-color: #f2f6f8;
 }
 
+.product-card-title .instrument-title {
+  margin: 0;
+  color: #32425c;
+}
+
 .main-content .catalogue-categories {
   padding-top: 60px;
   padding-bottom: 35px;
@@ -759,9 +779,11 @@ MAIN CONTENT
 }
 
 .catalogue-categories .category-item-title {
+  margin: 0;
   margin-bottom: 13px;
   font-size: 24px;
   line-height: 30px;
+  color: #ffffff;
 }
 
 .catalogue-categories .category-item-link {
@@ -889,6 +911,11 @@ MAIN CONTENT
 
 .slider-units .slide-drills {
   background-image: url("../img/slider-unit2.jpg");
+}
+
+.slider-unit .slider-unit-title {
+  margin: 0;
+  color: #ffffff;
 }
 
 .slider-unit p {
@@ -1101,6 +1128,7 @@ MAIN CONTENT
 .filters .filters-title,
 .sorting .sorting-title {
   width: 180px;
+  margin: 0;
   padding-top: 8px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -1165,7 +1193,7 @@ MAIN CONTENT
 }
 
 .sort-type a {
-  border-bottom: 1px dashed #ee3946;
+  border-bottom: 1px dotted #ee3946;
 }
 
 .sort-type a:hover {
@@ -1196,6 +1224,8 @@ MAIN CONTENT
 .popular-header .popular-title {
   float: left;
   width: 460px;
+  margin: 0;
+  color: #32425c;
 }
 
 .popular-header .btn {
@@ -1236,6 +1266,7 @@ MAIN CONTENT
 }
 
 .catalog-item .catalog-item-title {
+  margin: 0;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -1383,28 +1414,26 @@ MAIN CONTENT
   font-size: 0;
 }
 
-.catalog-paginator .btn {
-  width: 15px;
+.catalog-paginator .paginator-page {
+  display: inline-block;
+  vertical-align: top;
   margin-right: 10px;
 }
 
-.catalog-paginator .btn:last-child {
-  width: 120px;
+.catalog-paginator .paginator-page-active {
+  width: 18px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: #ee3946;
 }
 
-.catalog-paginator a {
-  text-decoration: none;
+.paginator-page a {
+  width: 16px;
   color: #000000;
 }
 
-.catalog-paginator .btn-white-active {
-  background-color: #ee3946;
-  border-color: #ee3946;
-  color: #ffffff;
-}
-
-.catalog-paginator .btn-white-active:hover {
-  border-color: #ee3946;
+.paginator-page .page-next {
+  width: 118px;
 }
 
 .main-content .instrument-info {
@@ -1415,8 +1444,8 @@ MAIN CONTENT
 
 .instrument-info .instrument-info-title,
 .services .services-title {
+  margin: 0;
   margin-bottom: 25px;
-  color: #000000;
 }
 
 .main-content .services {
@@ -1491,14 +1520,16 @@ MAIN CONTENT
   left: 320px;
   display: none;
   width: 620px;
-  height: 290px;
+  min-height: 290px;
 }
 
 .tab-content .tab-title {
+  margin: 0;
   margin-bottom: 20px;
   font-size: 36px;
   line-height: 43px;
   font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: normal;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -1540,8 +1571,8 @@ MAIN CONTENT
 }
 
 .information .seo-title {
+  margin: 0;
   margin-bottom: 23px;
-  color: #000000;
 }
 
 .seo-block p {
@@ -1735,6 +1766,7 @@ FOOTER
 .footer-nav-main a:active,
 .footer-nav-categories a:active {
   opacity: 0.5;
+  text-decoration: none;
 }
 
 .main-footer .main-footer-bottom {
@@ -1816,6 +1848,7 @@ FOOTER
 .feedback a:active,
 .developer a:active {
   color: #ee3946;
+  text-decoration: none;
 }
 
 /*
@@ -1916,7 +1949,9 @@ POP-UPS
   margin-right: 18px;
 }
 
-.contact-form-item p {
+.contact-form-item label,
+.contact-form-textarea label {
+  display: block;
   margin: 0;
   margin-bottom: 5px;
   font-size: 18px;
