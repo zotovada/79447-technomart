@@ -75,6 +75,7 @@ body {
   line-height: 24px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
+  color: #000000;
 }
 
 h1 {
@@ -82,6 +83,7 @@ h1 {
   line-height: 23px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
+  color: #ee3946;
 }
 
 h2 {
@@ -90,12 +92,14 @@ h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
+  color: #32425c;
 }
 
 h3 {
   font-size: 24px;
   line-height: 30px;
   font-family: "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
 }
 
 h4 {
@@ -103,6 +107,7 @@ h4 {
   line-height: 43px;
   font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 h5 {
@@ -110,6 +115,7 @@ h5 {
   line-height: 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
+  color: #000000;
 }
 
 h6 {
@@ -118,15 +124,6 @@ h6 {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-}
-
-body,
-h1,
-h2,
-h2,
-h4,
-h5,
-h6 {
   color: #000000;
 }
 
@@ -452,7 +449,6 @@ HEADER
   margin-right: 50px;
   padding-left: 52px;
   padding-right: 18px;
-  color: #ee3946;
 }
 
 .main-header-middle .header-contact {
@@ -753,7 +749,6 @@ MAIN CONTENT
 
 .product-card-title .instrument-title {
   margin: 0;
-  color: #32425c;
 }
 
 .main-content .catalogue-categories {
@@ -783,7 +778,6 @@ MAIN CONTENT
   margin-bottom: 13px;
   font-size: 24px;
   line-height: 30px;
-  color: #ffffff;
 }
 
 .catalogue-categories .category-item-link {
@@ -915,7 +909,6 @@ MAIN CONTENT
 
 .slider-unit .slider-unit-title {
   margin: 0;
-  color: #ffffff;
 }
 
 .slider-unit p {
@@ -1225,7 +1218,6 @@ MAIN CONTENT
   float: left;
   width: 460px;
   margin: 0;
-  color: #32425c;
 }
 
 .popular-header .btn {
@@ -1446,6 +1438,7 @@ MAIN CONTENT
 .services .services-title {
   margin: 0;
   margin-bottom: 25px;
+  color: #000000;
 }
 
 .main-content .services {
@@ -1573,6 +1566,7 @@ MAIN CONTENT
 .information .seo-title {
   margin: 0;
   margin-bottom: 23px;
+  color: #000000;
 }
 
 .seo-block p {
