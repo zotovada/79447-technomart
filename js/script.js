@@ -12,7 +12,6 @@ if (document.querySelector(".contact-field")) {
   contactLink.addEventListener("click", function(event) {
     event.preventDefault();
     contact.classList.add("modal-content-show");
-    contact.classList.add("contact-show");
     if (storageEmail && storageUsername) {
       username.value = storageUsername;
       email.value = storageEmail;
@@ -31,7 +30,7 @@ if (document.querySelector(".contact-field")) {
   });
 
   form.addEventListener("submit", function(event) {
-    if (!letter.value || !username.value || !email.value) {
+    if (!letter.value || letter.value == "В свободной форме" || !username.value || !email.value) {
       event.preventDefault ();
       contact.classList.remove("modal-error");
       contact.offsetWidth = contact.offsetWidth;
@@ -46,7 +45,6 @@ if (document.querySelector(".contact-field")) {
     event.preventDefault();
     if (document.querySelector(".contact-field")) {
       contact.classList.remove("modal-content-show");
-      contact.classList.remove("contact-show");
       contact.classList.remove("modal-error");
     }
   });
@@ -55,7 +53,6 @@ if (document.querySelector(".contact-field")) {
     if (event.keyCode === 27) {
       if (contact.classList.contains("modal-content-show")) {
         contact.classList.remove("modal-content-show");
-        contact.classList.remove("contact-show");
         contact.classList.remove("modal-error");
       }
     }
@@ -99,7 +96,7 @@ if (document.querySelector(".cart-field")) {
 
 if (document.querySelector(".map")) {
   var map = document.querySelector(".big-map");
-  var mapLink = document.querySelector(".map img");
+  var mapLink = document.querySelector(".small-map");
   var closeMap = map.querySelector(".modal-close");
 
   mapLink.addEventListener("click", function(event) {
@@ -122,6 +119,27 @@ if (document.querySelector(".map")) {
     }
   });
 };
+
+var searchInput = document.querySelector (".header-form-search input");
+var searchLabel = document.querySelector (".header-form-search label");
+
+searchInput.addEventListener("focus", function() {
+    searchLabel.textContent = "";
+    searchInput.style.color = "#000000";
+});
+
+searchInput.addEventListener("blur", function() {
+  if (searchInput.value) {
+    searchLabel.textContent = "";
+    searchInput.style.color = "#ffffff";
+  } else {
+    searchLabel.textContent = "Поиск:";
+  }
+});
+
+window.onload = function() {
+  searchInput.value = "";
+}
 
 
 
